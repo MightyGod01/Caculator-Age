@@ -1,0 +1,152 @@
+/* *,
+/* *::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #5efc5e, #6fcef6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    animation: animaate 1.5s linear infinite;
+
+  }
+  
+  .container {
+    background: linear-gradient(135deg, #5efc5e, #6fcef6);
+    width: 100%;
+    max-width: 500px;
+    border: 1px dotted rgb(255, 42, 42);
+    animation: animaate 7.5s linear infinite;
+    border-radius: 20px;
+    padding: 50px 30px;
+    box-shadow: 0 0 50px yellowgreen;
+  }
+  
+  .inputs-wrappers {
+    background-color: #080808;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 50px;
+  }
+  
+  input,
+  button {
+    height: 50px;
+    background-color: #ffffff;
+    color: black;
+    font-weight: 500;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .calculation {
+    background: darkred;
+        color: white; 
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 10px;
+  }
+  
+  .calculation::hover{
+    background: darkred;
+    transform: translateX(50%);
+    background:linear-gradient(360deg, gold pink blue purple);
+    transition: background-color 0.3s ease; 
+    animation: animaate 0.5s linear infinite;
+
+
+  }
+  
+  .outputs-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .outputs-wrapper div {
+    background-color: #080808;
+    border-radius: 5px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: rgba(30, 57, 77, 0.2) 0px 20px 30px -10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .outputs-wrapper div:hover {
+    transform: scale(1.05);
+  }
+  
+  span {
+    font-size: 39px;
+    font-weight: 500;
+    margin-bottom: -10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #707070;
+    font-weight: 500;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container{
+        max-width: 100%;
+    }
+}
+
+
+@keyframes animaate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(280deg);
+
+    }
+}
+
+ .alert{
+    font-size: 20px;
+    font-weight: 400;
+color: white;
+text-align: center;
+}
+
+.name.animation{
+    position: fixed;
+    /* bottom: 20px; */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    opacity: 0;
+    animation: fade-in-out 2s infinite;
+}
+
+@keyframes fade-in-out{
+    0%, 100%{
+        opacity: 0;
+    }
+        50% {
+            opacity: 1;}
+   
+}
